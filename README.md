@@ -72,7 +72,7 @@ README.md | This file (you can edit it for your purpose)
 Documentation | Documentation folder
 Documentation/planning | Planning folder
 Documentation/planning/planning.pdf | Planning documentation in pdf format
-...
+... | ...
 Documentation/presentation.pptx | Presentation Powerpoint
 Documentation/Video | Documentation video folder
 Documentation/Video/AppDemo.mp4 | How demo application is working
