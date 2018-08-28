@@ -5,7 +5,7 @@ This is an Mobile Project starter repository repository.
 Each student group downloads this starter repository from the Mobile Project 
 workspace at JAMK GitLab. After that, each student group (only one member) need to import this 
 starter repository back to JAMK GitLab with his/her own account and complete
-mobile project inside this repository.
+mobile project inside this repository with project group.
 
 Student needs to send all the project group student names, studentIDs and 
 repository url to teacher via email immediately after student has 
