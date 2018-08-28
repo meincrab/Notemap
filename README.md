@@ -42,7 +42,7 @@ Remember add your own self-evaluation (member and group) about your project work
 You can/need/should modify this README.md file to your own purposes.
 
 ### Documentation folder
-Each research repository should include Documentation folder. This folder 
+Each Mobile Project starter repository should include Documentation folder. This folder 
 contains all created documentation. Each member of the project group need to 
 keep track of what have done and when (important!). You can deside what tools your are using
 to keep track of your doing and how you will present it here in the 
