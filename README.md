@@ -26,7 +26,7 @@ Teacher is monitoring your project learning process all the time!
 
 Remember you can add an comments/notes to issues when you are moving it in Issues Boards. Teacher can also see your comments.
 
-Read carefully all the informations and rules below before you start doing your project assignment work!
+Read carefully all the informations and rules below before you start doing your project work!
 
 ## Repository structure
 ### README.md
