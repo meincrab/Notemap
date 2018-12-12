@@ -1,3 +1,20 @@
+# Information about project
+
+### Ekaterina Piispanen
+
+* Listan käsittely - 38 h (eniten tein viikko 47,48, mutta tein muutoksia viikkoilla 49 ja 50)
+* Tietokanta - 26h (v 48, 49)
+* Listan ja tietokannan yhdistäminen - 10h (v 49)
+* Toast ilmoitus - 3h (v 50)
+* Ilmoitus puhelimelle - 4h (v 50)
+* Virheiden korjaus - 7h (v 50)
+* Dokumentaatio - 6h (v 50)
+* QML Kaavi - 1h (v 50 ei onnistui)
+* Yhdeessä - 95h
+
+Listalle meni niin paljon aikaa, koska halusin tehdä "nested" lista ja se ei onnistunut niin helposti modelien kanssa.
+
+
 # Mobile Project Starter Repository
 This is an Mobile Project starter repository repository.
 
