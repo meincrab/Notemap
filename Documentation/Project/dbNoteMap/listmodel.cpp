@@ -72,6 +72,10 @@ QString ListModel::setNotes() {
     return tnotes;
 }
 
+void ListModel::ind(int i){
+    tid = i;
+}
+
 void ListModel::getTask(int ind){
     QSqlQuery query;
     query.prepare("SELECT id, " TABLE_DATE ", " TABLE_NAME ", " TABLE_CITY ", " TABLE_ADDRESS ", " TABLE_TIME ", " TABLE_COLOR ", " TABLE_NOTES " FROM " TABLE " WHERE id = :ID;");

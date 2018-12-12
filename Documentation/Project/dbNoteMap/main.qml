@@ -253,7 +253,7 @@ ApplicationWindow {
                                     width: 100
                                     height: 30
                                     onClicked: {
-                                        myModel.getTask(index);
+                                        myModel.ind(index);
                                         dialogDelete.open();
                                     }
                                     style: ButtonStyle {
@@ -312,6 +312,40 @@ ApplicationWindow {
         }
 
         Button {
+            id: show_map
+            text: qsTr("Map")
+            width: 50
+            height: 50
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 10
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+
+            onClicked: {
+
+            }
+
+            style: ButtonStyle {
+                label: Text {
+                    renderType: Text.NativeRendering
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: "Helvetica"
+                    font.pointSize: 20
+                    font.bold: true
+                    color: "black"
+                    text: control.text
+
+                }
+                background: Rectangle {
+                    color: "#E1E1E1"
+                    border.color: "#E1E1E1"
+                    radius: width * 0.5
+                }
+            }
+        }
+
+        Button {
             id: button_add
             text: qsTr("+")
             width: 50
@@ -363,6 +397,7 @@ ApplicationWindow {
             onAccepted: {
                 database.removeRecord(myModel.getId(myModel.setId()));
                 myModel.updateModel(button_date.text);
+                old.model = myModel.getOldTasks();
                 notificationClient.notification = "Task delited at: " + dateClass.current_time()
             }
         }
@@ -683,6 +718,7 @@ ApplicationWindow {
                         myModel.updateModel(button_date.text)
                         main_page.visible = true;
                         add_page.visible =false;
+                        old.model = myModel.getOldTasks();
                         messages.displayMessage("Task successfully added!");
                         notificationClient.notification = "Task added at: " + dateClass.current_time()
                     }
@@ -1020,6 +1056,7 @@ ApplicationWindow {
                     myModel.updateModel(button_date.text)
                     main_page.visible = true;
                     edit_page.visible =false;
+                    old.model = myModel.getOldTasks();
                     messages.displayMessage("Task successfully edited!");
                     notificationClient.notification = "Task edited at: " + dateClass.current_time()
                 }

@@ -32,6 +32,7 @@ public slots:
     void updateModel(QString date);
     int getId(int row);
     int setId();
+    void ind(int i);
     QString setName();
     QString setCity();
     QString setAddress();
