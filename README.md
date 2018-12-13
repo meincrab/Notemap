@@ -25,7 +25,7 @@ Listalle meni niin paljon aikaa, koska halusin tehdä "nested" lista ja se ei on
 * Videon tekeminen - 3h
 * Yhteensä ~90h-110h. 
 
-Itsearviointi. Arvosana: 1. 
+Itsearviointi. Arvosana: 1.  
 Aikaa ja hermoja on tullut käytettyä tosi paljon , mutta 90% ajasta meni turhiin yrityksiin, jota eivät antaneet odotettua tulosta.
 
 Omien suunnitelmien mukaan, oman työn alla oli tosi yksinkertainen keissi.
