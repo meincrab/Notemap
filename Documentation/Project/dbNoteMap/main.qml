@@ -7,6 +7,11 @@ import QtQuick.Window 2.2
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.3
 
+
+import QtLocation 5.9
+import QtPositioning 5.11
+
+
 ApplicationWindow {
     id: window
     visible: true
@@ -205,7 +210,7 @@ ApplicationWindow {
                             }
                             Text {
                                 id: notes
-                                text: "Notes: " + model.notes        
+                                text: "Notes: " + model.notes
                             }
 
                             Row {
@@ -322,6 +327,8 @@ ApplicationWindow {
             anchors.leftMargin: 10
 
             onClicked: {
+                main_page.visible = false;
+                map_page.visible = true;
 
             }
 
@@ -936,7 +943,7 @@ ApplicationWindow {
                     id: time_edit
                     width: 200
                     height: 30
-                    anchors.top: text6_edit.bottom
+                    anchors.top: text6_edit.botto
                     anchors.topMargin: 20
                     anchors.right: parent.right
                     anchors.rightMargin: 20
@@ -1121,8 +1128,187 @@ ApplicationWindow {
     InfoBanner {
         id: messages
     }
-}
 
+    Page {
+    id: map_page
+    visible: false
+    anchors.fill: parent
+
+
+    Rectangle {
+        id: map_rectangle
+        color: "#2e2d2d"
+        anchors.bottomMargin: 0
+        anchors.fill: parent
+
+        Plugin {
+             id: osmPlugin
+             allowExperimental: true
+             preferred: ["osm"]
+         }
+
+        PositionSource {
+            id: src
+            updateInterval: 10000
+            active: true
+
+            onPositionChanged: {
+                var coord = src.position.coordinate;
+                console.log("Coordinate:", coord.longitude, coord.latitude);
+                map.center = coord;
+                me.coordinate = coord
+                /*var jamkPlace = GeocodeModel.query = "Piippukatu 2, 40100 Jyväskylä, Finland"*/
+            }
+        }
+
+        Map {
+            id: map
+            anchors.fill: parent
+            plugin: osmPlugin
+            zoomLevel: 15
+
+            MapQuickItem {
+                             id: me
+                             coordinate:  PositionSource.position.coordinate
+                             anchorPoint.x: imageMe.width/2
+                             anchorPoint.y: imageMe.height
+                             sourceItem: Image {
+                                 width: 50; height: 50
+                                 id: imageMe
+                                 source: "images/meMark.png"
+                             }
+                         }
+                       /*MapQuickItem {
+                            id: place1
+                            anchorPoint.x: image1.width/2
+                            anchorPoint.y: image1.height
+                            sourceItem: Image {
+                                width: 75; height: 75
+                                id: image1
+                                source: "images/marker.png"
+
+                            }
+                        }*/
+
+
+
+
+            Address {
+
+                function getAddress(){
+                    var dataString = button_date.text.toString();
+                    console.log("Data is : " + dataString);
+                    var dataToArray = myModel.addressList(dataString).toString();
+                    var dataArray = dataToArray.split(",");
+                    console.log(dataArray.length);
+                    var arrayLength = dataArray.length;
+                    var addressList;
+                    console.log(dataArray);
+                    if (arrayLength > 1) {
+                        var iterationAmount = arrayLength/2;
+                        console.log("Will be runned " + iterationAmount);
+                        var arrayPointer = 0;
+                        var myStreet = dataArray[arrayPointer];
+                        var myCity = dataArray[arrayPointer+1];
+
+                        return myStreet;
+                    }
+                }
+
+
+
+                id: fromAddress
+                street: "Piippukatu 2"
+                city: "Jyväskylä"
+
+
+                Component.onCompleted: {
+                    street = Qt.binding(getAddress());
+                }
+
+            }
+            Address {
+                id: fromAddress2
+                street: "Ahjokatu 7"
+                city: "Jyväskylä"
+            }
+            Address {
+                id: fromAddress3
+                street: "Ihantolantie 5"
+                city: "Jyväskylä"
+            }
+
+
+
+
+            MapItemView {
+                model: geocodeModel
+                delegate: pointDelegate
+            }
+
+
+            Component {
+                id: pointDelegate
+
+                MapCircle {
+                    id: point
+                    radius: 125
+                    color: "#46a2da"
+                    border.color: "#190a33"
+                    border.width: 2
+                    smooth: true
+                    opacity: 0.25
+                    center: locationData.coordinate
+                }
+            }
+
+
+
+            GeocodeModel {
+                id: geocodeModel
+                 plugin: map.plugin
+                 query: fromAddress
+                 onLocationsChanged:
+                  {
+                      geocodeModel.query = fromAddress;
+                      geocodeModel.update();
+                      console.log("Coordinate jamk :",   map.center.latitude + " " +  map.center.longitude);
+                      /*if (count) {
+                          //place1.coordinate = get(0).coordinate
+                          map.center.latitude = get(0).coordinate.latitude
+                          map.center.longitude = get(0).coordinate.longitude
+                          console.log("Coordinate jamk :",   map.center.latitude + " " +  map.center.longitude);
+                      }*/
+                 }
+                 Component.onCompleted: update()
+            }
+
+
+
+     }
+
+
+}
+    Rectangle {
+         id: nav_bottom
+         x: 0
+         y: 0
+         width: 360
+         height: 300
+         color: "#00000000"
+
+         Button {
+             id: back_button
+             text: qsTr("Go Back")
+             onClicked: {
+                 main_page.visible = true;
+                 map_page.visible =false;
+             }
+         }
+     }
+ }
+
+}
 /*##^## Designer {
     D{i:57;anchors_height:200;anchors_width:200;anchors_x:31;anchors_y:160}
 }

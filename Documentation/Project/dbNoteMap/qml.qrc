@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>InfoBanner.qml</file>
         <file>InfoBannerComponent.qml</file>
+        <file>images/marker.png</file>
+        <file>images/meMark.png</file>
     </qresource>
 </RCC>
