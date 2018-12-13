@@ -14,7 +14,8 @@ https://youtu.be/yvEHhh2qvJQ
 * QML Kaavi - 1h (v 50 ei onnistui)
 * Yhteensä - 95h
 
-Listalle meni niin paljon aikaa, koska halusin tehdä "nested" lista ja se ei onnistunut niin helposti modelien kanssa.
+Listalle meni niin paljon aikaa, koska halusin tehdä "nested" lista ja se ei onnistunut niin helposti modelien kanssa. Itsearviointi on 3, koska tein melkein kaikki mitä halusin
+ja opin paljon uutta.
 
 
 
