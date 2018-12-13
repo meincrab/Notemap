@@ -1,5 +1,7 @@
 # Information about project
 
+https://youtu.be/yvEHhh2qvJQ
+
 ### Ekaterina Piispanen
 
 * Listan käsittely - 38 h (eniten tein viikko 47,48, mutta tein muutoksia viikkoilla 49 ja 50)
