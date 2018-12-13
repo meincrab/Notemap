@@ -10,9 +10,43 @@
 * Virheiden korjaus - 7h (v 50)
 * Dokumentaatio - 6h (v 50)
 * QML Kaavi - 1h (v 50 ei onnistui)
-* Yhdeessä - 95h
+* Yhteensä - 95h
 
 Listalle meni niin paljon aikaa, koska halusin tehdä "nested" lista ja se ei onnistunut niin helposti modelien kanssa.
+
+
+
+### Alexander Andreev
+* QT:n asennus Linux ympäristöön 17-20h. Asennuksen aikana tuli bugi AVD managerin kanssa, vikan etsimiseen ja korjamiseen meni muutama päivä. Viikko 47
+* Karttan ja sen elementtien dynaaminen onClick Generoiti javascriptin avulla - Failed 20h Viikko 47-50
+* Perehtyminen QT:n c++ ohjelmointiin 30h - - Failed 25-30h Viikko 47-50
+* Osoite->koordinaatit geoparseri javascript/c++ 30h failed. Viikko 49-50
+* Dokumentaatio 3h
+* Videon tekeminen - 3h
+* Yhteensä ~90h-110h. 
+
+Itsearviointi. Arvosana: 1. 
+Aikaa ja hermoja on tullut käytettyä tosi paljon , mutta 90% ajasta meni turhiin yrityksiin, jota eivät antaneet odotettua tulosta.
+
+Omien suunnitelmien mukaan, oman työn alla oli tosi yksinkertainen keissi.
+Siitä huolimatta , että tulos on kauhea, olen kuitenkin tyytyväinen kun on tullut opittu tosi paljon uutta.
+
+
+Tavoitteena oli saada dynaamisen kartan ja sen elementtien dynaaminen luonti osoittelistanperusteella. 
+Alkuvaiheessa käytin tosi paljon aikaa turhaan, kun minulla oli väärä käsitys miten QML:n elementit toimivat. 
+Yritin luoda kaikki elementit kerallaan yksinkertaisen javascriptin avulla, siihen meni muutama päivä aikaa. 
+Sen jälkeen tajusin että tästä ei tule mitään, ja olen aloitanut tutkimaan miten onnistuu toiminnalisuuden toteutus QT C++:n avulla. 
+Generoitu qml elementti ei pystynyt automaatisesti hakea koordinatit "Open Street Map" palvelimelta, eikä Esrilta. 
+Taas tuli väärä käsitys miten kaikki toimii, kuten sanotaan "Remember: just a few hours of attempts and mistakes can save you as much as five minutes of reading the documentation."
+Löysin sopivan kirjaston ja olen aloittanut toteuttamaan funktiota joka muuttaa osoitetta koordinaateiksi qml:n ulkopuolella. Palvelin palauttaa NUllia.. 
+Vihdoin netistä löysin esimerkin, missä on hyvin esitetty miten käytetään siitä kirjastoa. Yritin toteuttaa esimerkin mukaan. Ei toimi.
+Viimeisenä päivänä löysin toisen esimerkin, mutta en ole ehtinyt toteutta siitä.
+Siihen meni noin 100h aikaa...
+
+
+
+
+
 
 
 # Mobile Project Starter Repository
