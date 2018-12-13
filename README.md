@@ -49,7 +49,19 @@ Siihen meni noin 100h aikaa...
 
   
   
-    
+### Tatu Paajanen
+* Aluksi piti muistella kuinka Qt toimikaan 10h
+* Hälytyksen saaminen 40h
+* Ajan toiminta 40h
+* Dokumentaatio 3h
+
+Tutkin kuinka saada hälytys/ilmoitus käyttäjälle, käyttäjän valittuun aikaan. Sehän oli monimutkainen ja monivaiheinen eikä se lopulta onnistunut niinkuin piti. 
+Ongelmana oli että notifikatio toimintoa ei ole valmiina Qt:ella ja sen tajuamisessa meni kauan.
+Lopulta(Pitkän ajan jälkeen) muistin, että Qt:lla on valmiita projekteja josta, löysin notifikation toiminnan javaa koodia käytettynä.
+Sitten yritin saada että se muistuttaisi käyttäjän laittaman ajan perusteella, milloin muistutus lähetetään. En kuitenkaan löytänyt mitään sovellettavaa tapaa saada sitä toimimaan ja kaikki yritykset menivät mönkään.
+
+Lopulta kuitenkin sain että se ilmoittaa käyttäjälle, kun tämä tekee taskin/muistutuksen.
+Itsearvioinnin arvosanaksi: 1 sillä en saanut sitä toimimaan kuin piti. Olen kuitenkin tyytyväinen, sillä opin paljon ja että sain jotain edes toimimaan.
       
         
           
