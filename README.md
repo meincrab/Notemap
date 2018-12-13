@@ -54,6 +54,7 @@ Siihen meni noin 100h aikaa...
 * Hälytyksen saaminen 40h
 * Ajan toiminta 40h
 * Dokumentaatio 3h
+* yhteensä 93
 
 Tutkin kuinka saada hälytys/ilmoitus käyttäjälle, käyttäjän valittuun aikaan. Sehän oli monimutkainen ja monivaiheinen eikä se lopulta onnistunut niinkuin piti. 
 Ongelmana oli että notifikatio toimintoa ei ole valmiina Qt:ella ja sen tajuamisessa meni kauan.
