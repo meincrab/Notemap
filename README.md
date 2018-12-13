@@ -49,6 +49,24 @@ Siihen meni noin 100h aikaa...
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Mobile Project Starter Repository
 This is an Mobile Project starter repository repository.
 
